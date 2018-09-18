@@ -63,5 +63,6 @@ class ClientSpider(scrapy.Spider):
             client.add_value('first_name', name.first)
             client.add_value('last_name', name.last)
             client.add_value('email', data['bookings'][0]['email'])
+            client.add_value('phone_number', data['bookings'][0]['phone_number'])
 
             yield client.load_item()
